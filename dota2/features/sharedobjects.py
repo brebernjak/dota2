@@ -162,7 +162,7 @@ class SOCache(EventEmitter, dict):
         try:
             type_id = ESOType(type_id)
         except ValueError:
-            self._LOG.error("Unsupported type: %d" % type_id)
+            self._LOG.debug("Unsupported type: %d" % type_id)
             return
 
         proto = find_so_proto(type_id)
